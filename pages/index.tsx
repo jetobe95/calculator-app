@@ -1,5 +1,3 @@
-import { useTheme } from "../hooks/useTheme";
-import { useEffect, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "../theme/theme";
 import NumericKeypad from "../components/Keypad/NumericKeypad/NumericKeypad";

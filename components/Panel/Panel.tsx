@@ -1,9 +1,9 @@
-import { PanelContainer } from "./styledComponents";
+import { PanelContainer,PanelNumber } from "./styledComponents";
 
 export default function Panel() {
     return (
         <PanelContainer>
-            <h1>399,981</h1>
+            <PanelNumber>399,981</PanelNumber>
         </PanelContainer>
     )
 }

@@ -1,3 +1,4 @@
+import { mediaQueries } from './../../../utils/breakpoint';
 import styled from "styled-components";
 
 export const Keypad = styled.main`
@@ -5,9 +6,14 @@ export const Keypad = styled.main`
   padding: 1rem;
   display: grid;
   grid-template-columns: repeat(4, 60px);
-  grid-gap: 20px;
+  grid-gap: 13px;
   border-radius: 13px;
   font-size: 28px;
+  ${mediaQueries('md')`
+    font-size: 32px;
+    grid-gap: 24px;
+    grid-template-columns: repeat(4, 100px);
+  `}
   /* Agregar mediaquery para cambiar el fontsize */
 `;
 
