@@ -6,6 +6,7 @@ import { ChangeThemeProvider } from "../hooks/ChangeThemeContext";
 import { CalculatorProvider } from "../hooks/calculator/CalculatorContext";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  //@ts-ignore
   setToLS("all-themes", themes.default);
   return (
     <ChangeThemeProvider>
