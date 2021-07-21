@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react';
 import { setToLS, getFromLS } from '../utils/storage';
 import _ from 'lodash';
+import { Theme } from '../theme/types';
 
 export const useTheme = () => {
   const themes = getFromLS('all-themes');
-  const [theme, setTheme] = useState(themes?.data.light);
+  const [theme, setTheme] = useState<Theme>(themes?.data.light);
   const [themeLoaded, setThemeLoaded] = useState(false);
 
-  const setMode = (mode:object) => {
+  const setMode = (mode:Theme) => {
     setToLS('theme', mode)
     setTheme(mode);
   };
@@ -23,5 +24,5 @@ export const useTheme = () => {
     setThemeLoaded(true);
   }, []);
 
-  return { theme, themeLoaded, setMode, getFonts };
+  return { theme,themes, themeLoaded, setMode, getFonts };
 };

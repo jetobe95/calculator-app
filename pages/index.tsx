@@ -5,20 +5,16 @@ import { GlobalStyles } from "../theme/theme";
 import NumericKeypad from "../components/Keypad/NumericKeypad/NumericKeypad";
 import Panel from "../components/Panel/Panel";
 import Header from "../components/Header/Header";
+import { useChangeTheme } from "../hooks/useChangeTheme";
 const Container = styled.div`
   margin: 5px auto 5px auto;
 `;
-const SizedBox = styled.div<{height:string}>`
-  height:${(props)=>props.height};
+const SizedBox = styled.div<{ height: string }>`
+  height: ${(props) => props.height};
 `;
 
 export default function Home() {
-  const { theme, themeLoaded, getFonts } = useTheme();
-  const [selectedTheme, setSelectedTheme] = useState(theme);
-
-  useEffect(() => {
-    setSelectedTheme(theme);
-  }, [themeLoaded, theme]);
+  const { themeLoaded, selectedTheme } = useChangeTheme();
   return (
     <>
       {themeLoaded && (
@@ -26,9 +22,9 @@ export default function Home() {
           <GlobalStyles />
           <Container style={{ fontFamily: selectedTheme?.font }}>
             <Header />
-            <SizedBox height='34px'/>
+            <SizedBox height="30px" />
             <Panel />
-            <SizedBox height='24px'/>
+            <SizedBox height="24px" />
             <NumericKeypad />
           </Container>
         </ThemeProvider>

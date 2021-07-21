@@ -1,10 +1,11 @@
-import { HeaderContainer } from "./styledComponents";
+import { HeaderContainer, ThemeTitle,CalcTitle } from "./styledComponents";
+import ThemeSelector from "./ThemeSelector";
 
 export default function Header() {
-    return (
-        <HeaderContainer>
-            <h3>calc</h3>
-            THEME
-        </HeaderContainer>
-    )
+  return (
+    <HeaderContainer>
+      <CalcTitle>calc</CalcTitle>
+        <ThemeSelector/>
+    </HeaderContainer>
+  );
 }

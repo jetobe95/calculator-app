@@ -6,7 +6,7 @@ export const Keypad = styled.main`
   display: grid;
   grid-template-columns: repeat(4, 60px);
   grid-gap: 20px;
-  border-radius: 10px;
+  border-radius: 13px;
   font-size: 28px;
   /* Agregar mediaquery para cambiar el fontsize */
 `;
