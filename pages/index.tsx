@@ -6,7 +6,7 @@ import Header from "../components/Header/Header";
 import { useChangeTheme } from "../hooks/useChangeTheme";
 import Footer from "../components/Footer/Footer";
 const Container = styled.div`
-  margin: 5px auto 5px auto;
+  margin: 2.65rem auto 5px auto;
 `;
 const SizedBox = styled.div<{ height: string }>`
   height: ${(props) => props.height};
