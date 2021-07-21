@@ -1,0 +1,44 @@
+{
+    "data": {
+        "light": {
+            "id": "T_001",
+            "name": "Theme 1",
+            "colors": {
+                "body": "#3A4663",
+                "text": "#ffffff",
+                "panel": {
+                    "background": "#181F33",
+                    "text": "#FFFFFF"
+                },
+                "numericKeypad": {
+                    "hover": {
+                        "background": "#fff",
+                        "text": "#36362C"
+                    },
+                    "background": "#242D44",
+                    "text": "#434A59",
+                    "shadowColor": "#B3A497",
+                    "deleteKey": {
+                        "shadowColor": "#414E73",
+                        "background": "#647198",
+                        "text": "#fff",
+                        "hover": {
+                            "background": "#62B5BC",
+                            "text": "#fff"
+                        }
+                    },
+                    "equalKey": {
+                        "shadowColor": "#93261A",
+                        "background": "#D03F2F",
+                        "text": "#fff",
+                        "hover": {
+                            "background": "#FF8A38",
+                            "text": "#fff"
+                        }
+                    }
+                }
+            },
+            "font": "Spartan"
+        }
+    }
+}
