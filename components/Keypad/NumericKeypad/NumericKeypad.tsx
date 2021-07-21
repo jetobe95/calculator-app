@@ -1,28 +1,35 @@
-import { Key, DeleteKey, Keypad, ResetKey,EqualKey } from "./styledComponents";
+import { Op } from "../../../hooks/calculator/calculator";
+import useCalculator from "../../../hooks/calculator/useCalculator";
+import { Key, DeleteKey, Keypad, ResetKey, EqualKey } from "./styledComponents";
 
 export default function NumericKeypad() {
+  const { dispatch } = useCalculator();
+
+  const appendNumber = (number: string) =>
+    dispatch({ type: "APPEND_NUMBER", payload: number });
+  const operator = (op: Op) => dispatch({ type: "OPERATOR", payload: op });
+
   return (
     <Keypad>
-      <Key>7</Key>
-      <Key>8</Key>
-      <Key>9</Key>
-      <DeleteKey>DEL</DeleteKey>
-      <Key>4</Key>
-      <Key>5</Key>
-      <Key>6</Key>
-      <Key>+</Key>
-      <Key>1</Key>
-      <Key>2</Key>
-      <Key>3</Key>
-      <Key>{"-"}</Key>
+      <Key onClick={() => appendNumber("7")}>7</Key>
+      <Key onClick={() => appendNumber("8")}>8</Key>
+      <Key onClick={() => appendNumber("9")}>9</Key>
+      <DeleteKey onClick={() => dispatch({ type: "DEL" })}>DEL</DeleteKey>
+      <Key onClick={() => appendNumber("4")}>4</Key>
+      <Key onClick={() => appendNumber("5")}>5</Key>
+      <Key onClick={() => appendNumber("6")}>6</Key>
+      <Key onClick={() => operator("+")}>+</Key>
+      <Key onClick={() => appendNumber("1")}>1</Key>
+      <Key onClick={() => appendNumber("2")}>2</Key>
+      <Key onClick={() => appendNumber("3")}>3</Key>
+      <Key onClick={() => operator("-")}>{"-"}</Key>
 
       <Key>{"."}</Key>
-      <Key>{"0"}</Key>
-      <Key>{"/"}</Key>
-      <Key>{"x"}</Key>
-      <ResetKey>RESET</ResetKey>
-      <EqualKey>{'='}</EqualKey>
-
+      <Key onClick={() => appendNumber("0")}>{"0"}</Key>
+      <Key onClick={() => operator("/")}>{"/"}</Key>
+      <Key onClick={() => operator("*")}>{"x"}</Key>
+      <ResetKey onClick={() => dispatch({ type: "RESET" })}>RESET</ResetKey>
+      <EqualKey onClick={() => dispatch({ type: "MAKE_CALC" })}>{"="}</EqualKey>
     </Keypad>
   );
 }

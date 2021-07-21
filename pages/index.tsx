@@ -4,6 +4,7 @@ import NumericKeypad from "../components/Keypad/NumericKeypad/NumericKeypad";
 import Panel from "../components/Panel/Panel";
 import Header from "../components/Header/Header";
 import { useChangeTheme } from "../hooks/useChangeTheme";
+import Footer from "../components/Footer/Footer";
 const Container = styled.div`
   margin: 5px auto 5px auto;
 `;
@@ -24,6 +25,8 @@ export default function Home() {
             <Panel />
             <SizedBox height="24px" />
             <NumericKeypad />
+            <SizedBox height="1rem" />
+            <Footer/>
           </Container>
         </ThemeProvider>
       )}
