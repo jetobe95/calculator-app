@@ -1,6 +1,6 @@
 {
     "data": {
-        "light": {
+        "dark": {
             "id": "T_001",
             "name": "Theme 1",
             "colors": {
@@ -10,17 +10,63 @@
                     "background": "#181F33",
                     "text": "#FFFFFF"
                 },
+                "keyboard":{
+                    "background": "#242D44"
+                },
                 "numericKeypad": {
                     "hover": {
                         "background": "#fff",
                         "text": "#36362C"
                     },
-                    "background": "#242D44",
+                    "background": "#EAE3DC",
                     "text": "#434A59",
                     "shadowColor": "#B3A497",
                     "deleteKey": {
                         "shadowColor": "#414E73",
                         "background": "#647198",
+                        "text": "#fff",
+                        "hover": {
+                            "background": "#A2B2E1",
+                            "text": "#fff"
+                        }
+                    },
+                    "equalKey": {
+                        "shadowColor": "#873901",
+                        "background": "#C85402",
+                        "text": "#fff",
+                        "hover": {
+                            "background": "#FF8A38",
+                            "text": "#fff"
+                        }
+                    }
+                }
+            },
+            "font": "Spartan"
+        },
+        "light": {
+            "id": "T_002",
+            "name": "Theme 2",
+            "colors": {
+                "body": "#E6E6E6",
+                "text": "#36362C",
+                "panel": {
+                    "background": "#EEEEEE",
+                    "text": "#36362C"
+                },
+                "keyboard":{
+                    "background": "#D2CDCD"
+                },
+                "numericKeypad": {
+                    "hover": {
+                        "background": "#fff",
+                        "text": "#36362C"
+                    },
+                    "background": "#E5E4E1",
+                    "text": "#36362C",
+                    "shadowColor": "#A79E91",
+                    "deleteKey": {
+                        "shadowColor": "#1B6066",
+                        "background": "#378187",
                         "text": "#fff",
                         "hover": {
                             "background": "#62B5BC",
