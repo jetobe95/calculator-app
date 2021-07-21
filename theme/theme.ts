@@ -6,6 +6,9 @@ body {
     color: ${({ theme }) => theme.colors.text};
     font-family: ${({ theme }) => theme.font};
     transition: all 0.50s linear;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
   }
 
 

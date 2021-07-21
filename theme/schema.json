@@ -85,6 +85,49 @@
                 }
             },
             "font": "Spartan"
+        },
+        "orange": {
+            "id": "T_003",
+            "name": "Theme 3",
+            "colors": {
+                "body": "#17062A",
+                "text": "#FFE53D",
+                "panel": {
+                    "background": "#1E0936",
+                    "text": "#FFE53D"
+                },
+                "keyboard":{
+                    "background": "#1E0936"
+                },
+                "numericKeypad": {
+                    "hover": {
+                        "background": "#6C34AC",
+                        "text": "#FFE53D"
+                    },
+                    "background": "#331C4D",
+                    "text": "#FFE53D",
+                    "shadowColor": "#881C9E",
+                    "deleteKey": {
+                        "shadowColor": "#BE15F4",
+                        "background": "#56077C",
+                        "text": "#fff",
+                        "hover": {
+                            "background": "#8631AF",
+                            "text": "#fff"
+                        }
+                    },
+                    "equalKey": {
+                        "shadowColor": "#6CF9F1",
+                        "background": "#00DED0",
+                        "text": "#1A2327",
+                        "hover": {
+                            "background": "#93FFF8",
+                            "text": "#1A2327"
+                        }
+                    }
+                }
+            },
+            "font": "Spartan"
         }
     }
 }
